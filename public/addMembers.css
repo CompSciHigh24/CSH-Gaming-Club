@@ -1,0 +1,195 @@
+/* CARD FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+/* NABAR FONTS */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+/* END OF ALL FONTS USED IN HOME.EJS */
+
+* { box-sizing: border-box; }
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
+
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background: linear-gradient(109.6deg, rgb(18, 20, 23) 11.2%, rgb(20, 20, 21) 51.2%, rgb(0, 0, 0) 98.6%);
+
+}
+
+
+/* START OF JOIN PAGE CSS from https://codepen.io/knyttneve/pen/JQppEw*/
+.container {
+  display: flex;
+  height: 100vh;
+  background-image: linear-gradient( #1b2028 20%, #1b2028 100%);
+}
+
+
+.ai-arrow-left {
+  transition: all 200ms;
+}
+
+.ai-arrow-left:hover {
+  transform: scale(3);
+  opacity: 0.75;
+}
+
+input[type="password"],input[type="number"], input[type="text" ], textarea {
+
+  background-color : #131111; 
+
+}
+
+.left {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  animation-name: left;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
+
+.right {
+  flex: 1;
+  background-color: black;
+  transition: 1s;
+  background-image: url(https://media.giphy.com/media/RqKyfUVi7VMwHgXhsv/giphy.gif?cid=ecf05e479bmy3fom4oe8a6jrljlkrgo5ebkxsaog19b3rvf0&ep=v1_gifs_related&rid=giphy.gif&ct=g);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header > h2 {
+  margin: 0;
+  color: #25f49a;
+  text-shadow: 0 0 10px #25f49a, 0 0 20px #25f49a, 0 0 30px #25f49a;
+  font-size: 30px;
+}
+.leftside {
+  flex: 1;
+  background-color: black;
+  transition: 1s;
+  background-image: url(https://media.giphy.com/media/ekY8JdlX7FqQTbteE7/giphy.gif?cid=790b7611gh3qs2ies1pgrr07fcsz61v9atev1zig4hx3mfcs&ep=v1_gifs_search&rid=giphy.gif&ct=g);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header > h4 {
+  margin-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(0,0,0,.4);
+  color: #25f49a;
+  font-size: 18px;
+}
+
+.form {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form > p {
+  text-align: right;
+}
+
+.form > p > a {
+  color: #000;
+  font-size: 14px;
+}
+
+.form-field {
+  height: 46px;
+  padding: 0 16px;
+  border: 2px solid #131111;
+  border-radius: 4px;
+  color: #ffffff ;
+  /* box-shadow:0 0 10px #25f49a, 0 0 20px #25f49a, 0 0 30px #25f49a; */
+  font-family: 'Rubik', sans-serif;
+  outline: 0;
+  transition: .2s;
+  margin-top: 20px;
+}
+
+.form-field:focus {
+  border-color: #25f49a;
+  box-shadow:0 0 10px #25f49a, 0 0 20px #25f49a, 0 0 30px #25f49a;
+}
+
+.form > form > button {
+  padding: 12px 10px;
+  border: 0;
+  background: linear-gradient(to right, #292e2c 0%,#0f100f 100%); 
+  border-radius: 3px;
+  margin-top: 20px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* animation */
+
+.animation {
+  animation-name: move;
+  animation-duration: .4s;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+}
+
+.a1 {
+  animation-delay: 2s;
+}
+
+.a2 {
+  animation-delay: 2.1s;
+
+}
+
+.a3 {
+  animation-delay: 2.2s;
+}
+
+.a4 {
+  animation-delay: 2.3s;
+}
+
+.a5 {
+  animation-delay: 2.4s;
+}
+
+.a6 {
+  animation-delay: 2.5s;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes left {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+
+  100% {
+    opacity: 1;
+    padding: 20px 40px;
+    width: 440px;
+  }
+}
+
+/* END OF JOIN PAGE CSS  from https://codepen.io/knyttneve/pen/JQppEw*/

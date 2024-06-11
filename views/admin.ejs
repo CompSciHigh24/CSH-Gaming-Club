@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="/admin.css" />
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="members.css" />
+  <script src="https://unpkg.com/akar-icons-fonts"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- START OF GOOGLE FONTS LINKING -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kaushan+Script&family=Oswald&family=Pixelify+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sundanese:wght@400..700&display=swap" rel="stylesheet">
+  <!-- END OF GOOGLE FONTS LINKING -->
+
+  <!-- importted sytling from google for Jersey 10 due to trouble with font family css -->
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Jersey+10&display=swap');
+  </style>
+</head>
+<body class="member-page-body">
+
+  <!-- START NAVBAR FROM https://www.codingnepalweb.com/fullscreen-overlay-navigation-menu-bar-html-css/  -->
+  <input type="checkbox" id="active">
+  <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+  <div class="wrapper">
+    <ul>
+      <li><a href="/" class="NavPage"><i class="ai-home-alt1 navIcons"></i> Home</a></li>
+      <li><a href="/game" class="NavPage"><i class="ai-game-controller navIcons"></i> Games</a></li>
+      <li><a href="/event" class="NavPage"><i class="ai-calendar"></i> Events</a></li>
+      <li><a href="/member" class="NavPage"><i class="ai-person"></i> Members</a></li>
+      <li><a href="/aboutus.html" class="NavPage"><i class="ai-person"></i> About Us</a></li>
+    </ul>
+  </div>
+  <!-- END OF NAVBAR FROM https://www.codingnepalweb.com/fullscreen-overlay-navigation-menu-bar-html-css/  -->
+
+
+  
+  <div class="profile-grid">
+    <% for(let i = 0; i < members.length; i++) { %>
+      <!-- card from  https://codepen.io/havardob/pen/qBXZPRE -->
+      <article class="profile">
+        <div class="profile-image">
+          <img src="https://wallpapers-clan.com/wp-content/uploads/2022/12/cristiano-ronaldo-pfp-15.jpg" alt="Profile Picture"/>
+        </div>
+        <h2 class="profile-username"><i class="ai-mention"></i> <%= members[i].gamertag %></h2>
+        <small class="profile-user-handle"><i class="ai-person-check"></i> <%= members[i].name %> , <%= members[i].grade %>th</small>
+        <div class="profile-actions">
+          <medium class="profile-user-topgame">Top Game - <i class="ai-game-controller" style="color: #25f49a; text-shadow: 0 0 10px #25f49a, 0 0 20px #25f49a, 0 0 30px #25f49a;"></i> <%= members[i].favoriteGame %></medium>
+          
+         <i class="ai-backspace deleteButton "  id="deleteButton_<%= members[i]._id %>" data-member-id="<%= members[i]._id %>" style="color: 	#C21E56; text-shadow: 0 0 10px 	#C21E56, 0 0 20px 	#C21E56, 0 0 30px 	#C21E56; background:transparent;" ></i>
+        
+        </div>
+      </article>
+    <% } %>
+  </div>
+
+
+
+      
+     
+      <a href="/addEvent"> <button class="join-club-button" role="button"><span class="text">Create Event</span></button></a>
+  <script src="admin.js"></script>
+      
+</body>
+</html>

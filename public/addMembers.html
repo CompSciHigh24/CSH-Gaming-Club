@@ -1,0 +1,94 @@
+ <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- linking to icons homepage css and member css -->
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="addMembers.css" />
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
+
+    <!-- START OF GOOGLE FONTS LINKING -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kaushan+Script&family=Oswald&family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <!-- END OF GOOGLE FONTS LINKING -->
+
+    <!-- importted sytling from google for Jersey 10 due to trouble with font family css -->
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Jersey+10&display=swap');
+    </style>
+</head>
+
+<body id="home">
+  
+  <!-- START  OF NAVBAR FROM https://www.codingnepalweb.com/fullscreen-overlay-navigation-menu-bar-html-css/  -->
+      <input type="checkbox" id="active">
+      <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+      <div class="wrapper">
+        <i class="ai-more-vertical-fill"></i>
+         <ul>
+           <li></i></i><a href="/" class="NavPage"><i class="ai-home-alt1 navIcons"></i> Home</a></li>
+                 <li><a href="/game" class="NavPage"><i class="ai-game-controller navIcons"></i> Games</a></li>
+           <li><a href="/event" class="NavPage"><i class="ai-calendar"></i> Events</a></li>
+                 <li><a href="/member" class="NavPage"><i class="ai-person"></i> Members</a></li>
+                <li><a href="/aboutus.html" class="NavPage"><i class="ai-person"></i> About Us</a></li>
+              </ul>
+           </div>   
+  <!-- END OF NAVBAR FROM https://www.codingnepalweb.com/fullscreen-overlay-navigation-menu-bar-html-css/  -->
+
+  
+
+  <!-- start of login page from https://codepen.io/knyttneve/pen/JQppEw -->
+  <div class="container">
+    <div class="left">
+      <div class="header">
+        <a><span><h3><i style="color: #25f49a; text-shadow: 0 0 10px #25f49a, 0 0 20px #25f49a, 0 0 30px #25f49a;" class="ai-arrow-left " href= "/member"></i>  Back To Members</h3></span></a>
+        <h2 class="animation a1">Join the Club <i class="ai-game-controller navIcons"></i> </h2>
+        <h4 class="animation a2"> Add yourself to the squad </h4>
+      </div>
+      <div class="form">
+       <form>
+        <input type="text"  name="name" class="form-field animation a3" placeholder="Name" required>
+        <input type="text"  name="gamertag" class="form-field animation a4" placeholder="Codename" required>
+         <input type="number"  name="grade" class="form-field animation a4" placeholder="Grade" required>
+        <input type="password" class="form-field animation a4" placeholder="Access Code"> <br>
+        <button type="submit" class="animation a6">JOIN</button>
+       </form>   
+
+      </div>
+    </div>
+    <div class="right"></div>
+  </div>
+  <!-- end of login page from https://codepen.io/knyttneve/pen/JQppEw -->
+
+
+  
+<!-- <form>
+  <label> Name: </label>
+  <input type="text" name="name" required />
+
+  <label> Gamertag: </label>
+  <input type="text" name="gamertag" required />
+
+  <label> Grade: </label>
+  <input type="number" name="grade" required />
+
+  <label> Favorite Game: </label>
+  <input type="text" name="favoriteGame" />
+
+  <button type="submit">Submit</button>
+</form>
+ -->
+
+  
+<script src="/member.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  crossorigin="anonymous"
+></script>
+</body>
+</html>

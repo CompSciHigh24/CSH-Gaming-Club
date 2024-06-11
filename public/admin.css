@@ -1,0 +1,329 @@
+/* ALL FONTS USED IN HOME.EJS */
+
+/* CARD FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+/* NABAR FONTS */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+/* END OF ALL FONTS USED IN HOME.EJS */
+
+body, html{
+    background:#000000; 
+    height: 100%;
+    margin: 0;
+
+}
+
+/* START OF NAV BAR CSS */
+
+/* css for names of the pages (home,games,events members) */
+.NavPage{
+ font-family: "Bebas Neue", sans-serif;
+}
+
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background: linear-gradient(109.6deg, rgb(18, 20, 23) 11.2%, rgb(20, 20, 21) 51.2%, rgb(0, 0, 0) 98.6%);
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.1s ease-in-out;
+}
+#active:checked ~ .wrapper{
+  clip-path: circle(75%);
+}
+.menu-btn{
+  position: fixed;
+  z-index: 3;
+  right: 20px;
+  /* left: 20px; */
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 60%;
+  font-size: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  background: linear-gradient(109.6deg, rgb(15, 16, 15) 11.2%, rgb(24, 27, 25) 51.2%, rgb(32, 34, 44) 98.6%);
+
+  
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .menu-btn{
+  background: #ffffff;
+  color: #4158d0;
+}
+#active:checked ~ .menu-btn i:before{
+  content: "\f00d";
+}
+.wrapper ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+.wrapper ul li{
+  margin: 15px 0;
+}
+.wrapper ul li a{
+  color: none;
+  text-decoration: none;
+  font-size: 55px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #25f49a;
+    text-shadow: 0 0 10px #25f49a, 0 0 15px #25f49a, 0 0 20px #25f49a;
+  position: relative;
+  line-height: 50px;
+    
+  
+}
+.wrapper ul li a:after{
+  position: absolute;
+  content: "";
+  
+  width: 100%;
+  height: 55px;
+  left: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.1s ease;
+}
+.wrapper ul li a:hover:after{
+  transform: scaleY(1);
+    transition: all 900ms;
+     
+}
+.wrapper ul li a:hover{
+  /* color: #4158d0; */
+    font-size: 60px;
+
+    
+}
+input[type="checkbox"]{
+  display: none;
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  text-align: center;
+  width: 100%;
+  color: #202020;
+}
+.content .title{
+  font-size: 40px;
+  font-weight: 700;
+}
+/* .content p{
+  font-size: 35px;
+  font-weight: 600;
+} */
+
+/* END OF NAV BAR CSS */
+
+
+
+/* START OF CCS FOR PAGE TITLE BANNER */
+.titleWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 17px; /* Optional: Add some margin from the top */
+    z-index: 10;
+  
+}
+
+.pageHeader {
+    /* css gradient from https://gradients.shecodes.io/gradients/26  */
+    background: linear-gradient(109.6deg, rgb(14, 20, 27) 11.2%, rgb(13, 15, 18) 51.2%, rgb(0, 0, 0) 98.6%);
+    /* font from google */
+   font-family: "Bebas Neue", sans-serif;
+    color: #25f49a; 
+    font-size: 35px;
+    position: absolute;
+    z-index: 1;
+    top: 35px;
+    left: 45vw;
+    
+    padding: 1.25px 27px; /* Add some padding for a better look */
+    border-radius: 57px;
+    text-align: center; /* Center-align the text inside the header */
+    display: inline-block; /* Make the header width fit its content */
+    
+}
+/* END OF CCS FOR PAGE TITLE BANNER */
+
+
+
+/* START OF CSS FOR THE CARDS OF GAMING CLUB MEMBERS FROM https://codepen.io/havardob/pen/qBXZPRE */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300..900&display=swap');
+
+*,
+*:before, *:after {
+   box-sizing: border-box;
+}
+/* Some basic CSS overrides */
+ #member-page-body {
+   line-height: 1.5;
+   min-height: 100vh;
+   font-family: "Rubik", sans-serif;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #e20808;
+}
+ button, input, select, textarea {
+   font: inherit;
+}
+ a {
+   color: inherit;
+}
+/* End basic CSS override */
+ .profile {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   padding: 3rem;
+   width: 90%;
+   max-width: 300px;
+   background-color: #1b2028;
+   border-radius: 16px;
+   position: relative;
+   border: 3px solid transparent;
+   background-clip: padding-box;
+   text-align: center;
+   color: #f1f3f3;
+   background-image: linear-gradient(135deg, rgba(117, 46, 124, 0.35), rgba(115, 74, 88, 0.1) 15%, #1b2028 20%, #1b2028 100%);
+}
+.profile-grid  {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: left;
+  background-color:transparent;
+  margin-left: 50px;
+  margin-top: 75px;
+
+}
+.profile {
+  width: auto;
+}
+ .profile:after {
+   content: "";
+   display: block;
+   top: -3px;
+   left: -3px;
+   bottom: -3px;
+   right: -3px;
+   z-index: -1;
+   position: absolute;
+   border-radius: 16px;
+   background-image: linear-gradient(135deg, #1c9c53, #00ffaa 20%, #1b2028 30%, #2c333e 100%);
+}
+ .profile-image {
+   border-radius: 50%;
+   overflow: hidden;
+   width: 175px;
+   height: 175px;
+   position: relative;
+}
+ .profile-image img {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 100%;
+}
+ .profile-username {
+    font-style: italic;
+   font-size: 1.2rem;
+   font-weight: 600;
+   margin-top: 1.5rem;
+    font-family: "Rubik", sans-serif;
+}
+ .profile-user-handle {
+   color: #7d8396;
+    font-style: normal;
+}
+ .profile-user-topgame {
+   font-style: normal;
+   color: #7d8396;
+}
+ .profile-actions {
+   margin-top: 1.5rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+ .profile-actions > * {
+   margin: 0 0.25rem;
+}
+ .btn {
+   border: 0;
+   background-color: transparent;
+   padding: 0;
+   height: 46px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   line-height: 1;
+   transition: 0.15s ease;
+}
+ .btn--primary {
+   border-radius: 99em;
+   background-color: #3772ff;
+   background-image: linear-gradient(135deg, #5587ff, #3772ff);
+   color: #fff;
+   padding: 0 1.375em;
+}
+ .btn--primary:hover, .btn--primary:focus {
+   background-size: 150%;
+}
+ .btn--icon {
+   height: 46px;
+   width: 46px;
+   border-radius: 50%;
+   border: 3px solid #343945;
+   color: #7d8396;
+}
+ .btn--icon i {
+   font-size: 1.25em;
+}
+ .btn--icon:hover, .btn--icon:focus {
+   border-color: #7d8396;
+}
+ .profile-links {
+   margin-top: 3.5rem;
+}
+ .link {
+   text-decoration: none;
+   color: #7d8396;
+   margin-left: 0.375rem;
+   margin-right: 0.375rem;
+}
+ .link i {
+   font-size: 1.25em;
+}
+/* END OF CSS FOR THE CARDS OF GAMING CLUB MEMBERS FROM https://codepen.io/havardob/pen/qBXZPRE */
